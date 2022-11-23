@@ -1,0 +1,64 @@
+<!--HTML (Hypertext Markup Language) - это код, который используется для структурирования и отображения веб-страницы и её контента.-->
+<!--HTML не является языком программирования; это язык разметки, и используется, чтобы сообщать вашему браузеру, как отображать веб-страницы, которые вы посещаете.-->
+<!DOCTYPE html> <!-- Древний не актуальный но уважаемый артефакт обозначающий правильную работу html докумена-->
+<html lang="en">
+    <head> <!-- Элемент Хед(голова) включает в себя элементы страницы которые не отображаются на самой странице, исполняющие разнличные функции веб страницы которые добавил сам веб дизайнер-->
+        <meta charset="utf-8"> <!-- Этот элемент предназначен для того чтобы распознавать любые возможные символы-->
+        <title> Страница здравого изучения HTML и CSS</title> <!-- название страницы в поисковой системе-->
+        <link href="styles/style.css" rel="stylesheet" type="text/css"> <!-- Путь к CSS документу, который будет отвечать за стилизацию веб-страницы.-->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'><!--Этот код связывает вашу страницу с таблицой стилями, которая загружает семейство шрифтов Open Sans 
+            вместе с вашей страницей и позволяет вам применять их к вашим HTML-элементам используя свою собственную таблицу стилей.-->
+    </head>
+    <body> <!-- Элемент Боди(тело) отображает весь контент страницы для пользователей, здесь прописывается вся разметка, которая будет отображена на странице-->
+        <h1>Макима сосочка писечка</h1>
+        <img src="images/test-image.jpg" alt="makima-gnida"> <!-- Изображение вставляется в элемент контента(body) с помощью элемента img и атрибутом src с путем к изображению, а так же alt для описания изображения-->
+        <p> на пикчу можна нажать ведь я наделил эту страницу суперфункционалом ежж</p>
+        <p> Почему стоит <strong>прислуживать Макиме</strong> причины по списку:</p> <!-- это разметка параграфа(Абзаца)-->
+        <ul> <!--Это разметка ненумированного списка-->
+            <li> Она сосочка</li><!-- Это пункт списка-->
+            <li> Она писечка</li>
+            <li> Ээ, ну.. Это Макима!</li>
+            <li> Гав!</li>
+        </ul>
+        <a href="https://www.mozilla.org/ru/about/manifesto/details/">Хентыч с Макимой</a> <!--элемент <a> сокращение от "anchor" ("якорь") делает текст ссылкой к которому добавлен АТРИБУТ href с адресом ссылки-->
+        <!--href образуется как hypertext reference ("гипертекстовая ссылка").-->
+        <p>Предварительно запишем на тебя данные</p>
+        <form method="post" action='https://register-demo.freecodecamp.org'>
+            <fieldset>
+              <label for="first-name">имя по паспорту: <input id="first-name" name="first-name" type="text" required /></label>
+              <label for="last-name">фамилия оттуда же: <input id="last-name" name="last-name" type="text" required /></label>
+              <label for="email">емаил: <input id="email" name="email" type="email" required /></label>
+              <label for="new-password">пароль от емайла: <input id="new-password" name="new-password" type="password" pattern="[a-z0-5]{8,}" required /></label>
+            </fieldset>
+            <fieldset>
+              <label for="personal-account"><input id="personal-account" type="radio" name="account-type" /> личное пользование</label>
+              <label for="business-account"><input id="business-account" type="radio" name="account-type" /> нет, блядь, публичное</label>
+              <label for="terms-and-conditions" name="terms-and-conditions">
+                <input id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> я соглашаюсь с <a href="https://www.freecodecamp.org/news/terms-of-service/">правилами конфиденциальностей етова сайта ежжи</a>
+              </label>
+            </fieldset>
+            <fieldset>
+              <label for="profile-picture">фотка паспорта: <input id="profile-picture" type="file" name="file" /></label>
+              <label for="age">скока тебе лет на данный момент: <input id="age" type="number" name="age" min="13" max="120" /></label>
+              <label for="referrer">как ты сюда попал ваще?
+                <select id="referrer" name="referrer">
+                  <option value="">(select one)</option>
+                  <option value="1">случайно</option>
+                  <option value="2">випадково</option>
+                  <option value="3">тебя ебет?</option>
+                  <option value="4">Other</option>
+                </select>
+              </label>
+              <label for="bio">расскади o себе всё:
+                <textarea id="bio" name="bio" rows="3" cols="30" placeholder="всем превед меня зовут изольда мне 15 люблю аниме и полуголых мальчиков"></textarea>
+              </label>
+            </fieldset>
+            <input type="submit" value="Submit" />
+          </form>
+    </body>
+    <button>чендж нейм</button>
+    <script src="scripts/main.js"></script>
+    <!--Причиной, по которой ты поставил элемент <script> в нижней части HTML файла, является то, что HTML-элементы загружаются браузером в том порядке, в котором они расположены в файле. 
+        Поэтому, если JavaScript загружается первым и ему нужно взаимодействовать с HTML ниже его, он не сможет работать, так как JavaScript будет загружен раньше, чем HTML, с которым нужно работать. 
+        Поэтому, располагать JavaScript в нижней части HTML страницы считается лучшей стратегией.-->
+</html>
